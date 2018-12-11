@@ -1,1 +1,7 @@
-<p>This page will display information about entry number <%= params[:id] %></p>
+<h1><%= @entry.word %></h1>
+
+<p><%= @entry.definition %></p>
+
+<p>Language: <%= @entry.language %></p>
+
+<%= link_to "Edit", edit_entry_path(@entry)%>

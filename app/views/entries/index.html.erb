@@ -1,1 +1,11 @@
-<p>This is the entries index page. YOU GOT THE TOUCH, YOU GOT THE POWER!</p>
+<h1>This is the entries index page. YOU GOT THE TOUCH, YOU GOT THE POWER!</h1>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <%= link_to entry.word, entry_path(entry) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Entry", new_entry_path %>
